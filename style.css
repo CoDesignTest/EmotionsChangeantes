@@ -1,0 +1,38 @@
+/* Positionner le container main */
+
+main {
+  width: 400px;
+  margin: 5em auto;
+}
+
+.emotion__box {
+  position: relative;
+}
+
+/* Définir la taille des images */
+
+.emotion__box img {
+  width: 400px;
+}
+
+/* Rendre la seconde image invisible, définir sa position
+lorsqu'elle apparait, et régler les propriétés de transition */
+
+.emotion__box img:nth-child(2) {
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  transition: opacity ease 0.4s;
+  -webkit-transition: opacity ease 0.4s;
+  -moz-transition: opacity ease 0.4s;
+  -ms-transition: opacity ease 0.4s;
+  -o-transition: opacity ease 0.4s;
+}
+
+/* Régler l'opacité afin que la seconde image apparaiise au dessus de la première lorsque 
+le curseur passe dessus */
+
+.emotion__box:hover img:nth-child(2) {
+  opacity: 1;
+}
